@@ -1,68 +1,60 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Om Tapdiya | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-white scroll-smooth">
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-4">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I’m Om Tapdiya 👋</h1>
-    <p class="text-xl md:text-2xl text-gray-400">Student / AI & ML Aspirant / Tech Enthusiast</p>
-  </section>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Om Tapdiya | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+      <img src="./assets/profile.png" alt="Profile" class="w-40 h-40 rounded-full shadow-lg mb-4" />
+      <h1 class="text-4xl md:text-6xl font-bold mb-2">Hi, I’m Om Tapdiya</h1>
+      <p class="text-xl md:text-2xl text-gray-300">Student & AI/ML Aspirant</p>
+      <a href="#projects" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full transition">
+        See My Work ↓
+      </a>
+    </header>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 px-4 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6 text-center">🧠 Skills & Tech Stack</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div>HTML</div>
-      <div>CSS</div>
-      <div>JavaScript</div>
-      <div>Python</div>
-      <div>Java</div>
-      <div>Flask</div>
-      <div>IoT / ESP32</div>
-      <div>Git / GitHub</div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 px-4 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6 text-center">🛠️ Projects</h2>
-    <div class="grid gap-6 md:grid-cols-2">
-      <div class="bg-gray-800 p-6 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">Smart Home Automation</h3>
-        <p class="text-gray-400 mb-4">ESP32 based home automation with sensors, biometric, and water management system.</p>
-        <a href="#" class="text-blue-400 hover:underline">View Project</a>
+    <section id="skills" class="py-16 px-6 bg-gray-800">
+      <h2 class="text-3xl font-semibold mb-8 text-center">🧠 Skills & Tech Stack</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <div>Python</div>
+        <div>Java</div>
+        <div>Tailwind CSS</div>
+        <div>Git & GitHub</div>
+        <div>ESP32 / IoT</div>
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">Distributed File System</h3>
-        <p class="text-gray-400 mb-4">Python + Flask-based DFS with NameNode/DataNode & file splitting system.</p>
-        <a href="#" class="text-blue-400 hover:underline">View Project</a>
+    </section>
+
+    <section id="projects" class="py-16 px-6">
+      <h2 class="text-3xl font-semibold mb-8 text-center">🛠️ Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+          <img src="./assets/project1.png" alt="Project 1" class="rounded mb-4">
+          <h3 class="text-xl font-bold">Smart Home Automation</h3>
+          <p class="text-gray-400">IoT project using ESP32, automating gate, lights, gas detection, and more.</p>
+        </div>
+        <!-- Add more projects as needed -->
       </div>
-      <div class="bg-gray-800 p-6 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">Password Strength Analyzer</h3>
-        <p class="text-gray-400 mb-4">A Java-based GUI tool to evaluate password strength.</p>
-        <a href="#" class="text-blue-400 hover:underline">View Project</a>
+    </section>
+
+    <section id="contact" class="py-16 px-6 bg-gray-800">
+      <h2 class="text-3xl font-semibold mb-8 text-center">📫 Contact Me</h2>
+      <div class="text-center space-y-3">
+        <p>Email: omtapdiya75@gmail.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/om-tapdiya-438549272" class="text-indigo-400 hover:underline" target="_blank">/om-tapdiya</a></p>
+        <p>GitHub: <a href="https://github.com/Om-mac" class="text-indigo-400 hover:underline" target="_blank">@Om-mac</a></p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 px-4 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-semibold mb-6">👨‍💻 About Me</h2>
-    <p class="text-gray-400">I'm Om Tapdiya, a passionate student driven by curiosity in AI, IoT, and all things tech. I love building smart systems and exploring real-world applications through code.</p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-4 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-semibold mb-6">📫 Contact</h2>
-    <p class="mb-2">Email: <a href="mailto:your@email.com" class="text-blue-400 hover:underline">your@email.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/om-tapdiya-438549272/" target="_blank" class="text-blue-400 hover:underline">Om Tapdiya</a></p>
-  </section>
-
-  <footer class="text-center text-gray-500 text-sm pb-6">© 2025 Om Tapdiya. All rights reserved.</footer>
-</body>
+    <footer class="py-6 text-center text-gray-500 text-sm bg-gray-900 border-t border-gray-700">
+      <p>© 2025 Om Tapdiya. All rights reserved.</p>
+    </footer>
+    <script src="./scripts/main.js" defer></script>
+  </body>
 </html>
