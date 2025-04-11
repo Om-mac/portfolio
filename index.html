@@ -59,101 +59,109 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 px-6">
-    <h2 class="text-3xl font-semibold mb-8 text-center">🛠️ Projects</h2>
-    <div class="grid md:grid-cols-2 gap-8">
+<section id="projects" class="py-16 px-6">
+  <h2 class="text-3xl font-semibold mb-8 text-center">🛠️ Projects</h2>
+  <div class="grid md:grid-cols-2 gap-8">
 
-      <!-- Smart Home Automation -->
-      <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
-        <div class="relative h-48 mb-4 overflow-hidden rounded">
-          <template x-for="i in 2" :key="i">
-            <img :src="`./assets/homeautomation-${i}.png`" x-show="slide === i"
-              class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
-              :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
-          </template>
-          <button @click="slide = slide === 1 ? 2 : slide - 1"
-            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-            ‹
-          </button>
-          <button @click="slide = slide === 2 ? 1 : slide + 1"
-            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-            ›
-          </button>
-        </div>
-        <h3 class="text-xl font-bold">Smart Home Automation</h3>
-        <p class="text-gray-400">
-          IoT project using ESP32: biometric gate access, automatic lighting, gas & fire detection, auto irrigation, and
-          more.
-        </p>
+    <!-- Snake Game -->
+    <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+      <div class="relative h-48 mb-4 overflow-hidden rounded">
+        <template x-for="i in 4" :key="i">
+          <img :src="`./assets/snakegame-${i}.png`" x-show="slide === i"
+            class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+            :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+        </template>
+        <button @click="slide = slide === 1 ? 4 : slide - 1"
+          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ‹
+        </button>
+        <button @click="slide = slide === 4 ? 1 : slide + 1"
+          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ›
+        </button>
       </div>
-
-      <!-- Snake Game -->
-      <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
-        <div class="relative h-48 mb-4 overflow-hidden rounded">
-          <template x-for="i in 4" :key="i">
-            <img :src="`./assets/snakegame-${i}.png`" x-show="slide === i"
-              class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
-              :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
-          </template>
-          <button @click="slide = slide === 1 ? 4 : slide - 1"
-            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-            ‹
-          </button>
-          <button @click="slide = slide === 4 ? 1 : slide + 1"
-            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-            ›
-          </button>
-        </div>
-        <h3 class="text-xl font-bold">Snake Game</h3>
-        <p class="text-gray-400">Classic snake game made using Python and Pygame, fun and addictive gameplay.</p>
-      </div>
-
-      <!-- Calculator -->
-      <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
-        <div class="relative h-48 mb-4 overflow-hidden rounded">
-          <template x-for="i in 4" :key="i">
-            <img :src="`./assets/calculator-${i}.png`" x-show="slide === i"
-              class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
-              :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
-          </template>
-          <button @click="slide = slide === 1 ? 4 : slide - 1"
-            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-            ‹
-          </button>
-          <button @click="slide = slide === 4 ? 1 : slide + 1"
-            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-            ›
-          </button>
-        </div>
-        <h3 class="text-xl font-bold">Calculator</h3>
-        <p class="text-gray-400">A simple and clean calculator built using HTML, CSS, and JavaScript.</p>
-      </div>
-
-      <!-- Real Estate App -->
-      <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
-        <div class="relative h-48 mb-4 overflow-hidden rounded">
-          <template x-for="i in 5" :key="i">
-            <img :src="`./assets/realestate-${i}.png`" x-show="slide === i"
-              class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
-              :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
-          </template>
-          <button @click="slide = slide === 1 ? 5 : slide - 1"
-            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-            ‹
-          </button>
-          <button @click="slide = slide === 5 ? 1 : slide + 1"
-            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-            ›
-          </button>
-        </div>
-        <h3 class="text-xl font-bold">Real Estate App</h3>
-        <p class="text-gray-400">Flask web app with house listings, search features, and contact form — powered by CSV
-          data.</p>
-      </div>
-
+      <h3 class="text-xl font-bold">Snake Game</h3>
+      <p class="text-gray-400">Classic snake game made using HTML,CSS,JS ; fun and addictive gameplay.</p>
+      <a href="https://github.com/Om-mac/snakegame" target="_blank"
+         class="text-blue-400 hover:underline mt-2 inline-block">🔗 View on GitHub</a>
     </div>
-  </section>
 
+    <!-- Calculator -->
+    <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+      <div class="relative h-48 mb-4 overflow-hidden rounded">
+        <template x-for="i in 4" :key="i">
+          <img :src="`./assets/calculator-${i}.png`" x-show="slide === i"
+            class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+            :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+        </template>
+        <button @click="slide = slide === 1 ? 4 : slide - 1"
+          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ‹
+        </button>
+        <button @click="slide = slide === 4 ? 1 : slide + 1"
+          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ›
+        </button>
+      </div>
+      <h3 class="text-xl font-bold">Calculator</h3>
+      <p class="text-gray-400">A simple and clean calculator built using HTML, CSS, and JavaScript.</p>
+      <a href="https://github.com/Om-mac/real-estate-app" target="_blank"
+         class="text-blue-400 hover:underline mt-2 inline-block">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Smart Home Automation -->
+    <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+      <div class="relative h-48 mb-4 overflow-hidden rounded">
+        <template x-for="i in 2" :key="i">
+          <img :src="`./assets/homeautomation-${i}.png`" x-show="slide === i"
+            class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+            :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+        </template>
+        <button @click="slide = slide === 1 ? 2 : slide - 1"
+          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ‹
+        </button>
+        <button @click="slide = slide === 2 ? 1 : slide + 1"
+          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ›
+        </button>
+      </div>
+      <h3 class="text-xl font-bold">Smart Home Automation</h3>
+      <p class="text-gray-400">
+        IoT project using ESP32: biometric gate access, automatic lighting, gas & fire detection, auto irrigation, and
+        more.
+      </p>
+      <a href="https://github.com/om-ma/smart-home-automation" target="_blank"
+         class="text-blue-400 hover:underline mt-2 inline-block">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Real Estate App -->
+    <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+      <div class="relative h-48 mb-4 overflow-hidden rounded">
+        <template x-for="i in 5" :key="i">
+          <img :src="`./assets/realestate-${i}.png`" x-show="slide === i"
+            class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+            :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+        </template>
+        <button @click="slide = slide === 1 ? 5 : slide - 1"
+          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ‹
+        </button>
+        <button @click="slide = slide === 5 ? 1 : slide + 1"
+          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ›
+        </button>
+      </div>
+      <h3 class="text-xl font-bold">Real Estate App</h3>
+      <p class="text-gray-400">
+        Flask web app with house listings, search features, and contact form — powered by CSV data.
+      </p>
+      <a href="https://github.com/Om-mac/real-estate-app" target="_blank"
+         class="text-blue-400 hover:underline mt-2 inline-block">🔗 View on GitHub</a>
+    </div>
+
+  </div>
+</section>
   <!-- Contact Section -->
   <section id="contact" class="py-16 px-6 bg-gray-800">
     <h2 class="text-3xl font-semibold mb-8 text-center">📫 Contact Me</h2>
