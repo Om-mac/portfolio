@@ -109,31 +109,7 @@
          class="text-blue-400 hover:underline mt-2 inline-block">🔗 View on GitHub</a>
     </div>
 
-    <!-- Smart Home Automation -->
-    <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
-      <div class="relative h-48 mb-4 overflow-hidden rounded">
-        <template x-for="i in 2" :key="i">
-          <img :src="`./assets/homeautomation-${i}.png`" x-show="slide === i"
-            class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
-            :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
-        </template>
-        <button @click="slide = slide === 1 ? 2 : slide - 1"
-          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-          ‹
-        </button>
-        <button @click="slide = slide === 2 ? 1 : slide + 1"
-          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
-          ›
-        </button>
-      </div>
-      <h3 class="text-xl font-bold">Smart Home Automation</h3>
-      <p class="text-gray-400">
-        IoT project using ESP32: biometric gate access, automatic lighting, gas & fire detection, auto irrigation, and
-        more.
-      </p>
-      <a href="https://github.com/om-ma/smart-home-automation" target="_blank"
-         class="text-blue-400 hover:underline mt-2 inline-block">🔗 View on GitHub</a>
-    </div>
+    
 
     <!-- Real Estate App -->
     <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
@@ -157,6 +133,32 @@
         Flask web app with house listings, search features, and contact form — powered by CSV data.
       </p>
       <a href="https://github.com/Om-mac/real-estate-app" target="_blank"
+         class="text-blue-400 hover:underline mt-2 inline-block">🔗 View on GitHub</a>
+    </div>
+
+    <!-- Smart Home Automation -->
+    <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+      <div class="relative h-48 mb-4 overflow-hidden rounded">
+        <template x-for="i in 2" :key="i">
+          <img :src="`./assets/homeautomation-${i}.png`" x-show="slide === i"
+            class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+            :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+        </template>
+        <button @click="slide = slide === 1 ? 2 : slide - 1"
+          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ‹
+        </button>
+        <button @click="slide = slide === 2 ? 1 : slide + 1"
+          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+          ›
+        </button>
+      </div>
+      <h3 class="text-xl font-bold">Smart Home Automation</h3>
+      <p class="text-gray-400">
+        IoT project using ESP32: biometric gate access, automatic lighting, gas & fire detection, auto irrigation, and
+        more.
+      </p>
+      <a href="https://github.com/om-ma/smart-home-automation" target="_blank"
          class="text-blue-400 hover:underline mt-2 inline-block">🔗 View on GitHub</a>
     </div>
 
