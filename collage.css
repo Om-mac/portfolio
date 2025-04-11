@@ -1,0 +1,24 @@
+.collage-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  pointer-events: none; /* So background doesn't block any interaction */
+}
+
+.collage-img {
+  position: absolute;
+  width: 250px;       /* Increased from 150px */
+  height: 160px;      /* Increased from 100px */
+  object-fit: cover;
+  opacity: 0.8;
+  transform: rotate(var(--rotation));
+  top: var(--top);
+  left: var(--left);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  filter: blur(1px);
+  pointer-events: none;
+}
