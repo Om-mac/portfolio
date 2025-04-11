@@ -1,104 +1,195 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Om Tapdiya | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="collage.css">
-  </head>
-  <body class="bg-gray-900 text-white font-sans">
-    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-      <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gray-900 text-white font-sans overflow-hidden">
-        
-        <!-- Collage Background -->
-        <div class="absolute inset-0 -z-10 collage-background">
-          <img src="assets/screens/project1.png" class="collage-img" />
-          <img src="assets/screens/project2.png" class="collage-img" />
-          <img src="assets/screens/project3.png" class="collage-img" />
-          <img src="assets/screens/project4.png" class="collage-img" />
-          <img src="assets/screens/project5.png" class="collage-img" />
-          <img src="assets/screens/project6.png" class="collage-img" />
-          <img src="assets/screens/project7.png" class="collage-img" />
-          <img src="assets/screens/project8.png" class="collage-img" />
-          <img src="assets/screens/project9.png" class="collage-img" />
-          <img src="assets/screens/project10.png" class="collage-img" />
-          <img src="assets/screens/project11.png" class="collage-img" />
-          <img src="assets/screens/project12.png" class="collage-img" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Tapdiya | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="collage.css">
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+  <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <section
+      class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gray-900 text-white font-sans overflow-hidden">
+
+      <!-- Collage Background -->
+      <div class="absolute inset-0 -z-10 collage-background">
+        <img src="assets/screens/project1.png" class="collage-img" />
+        <img src="assets/screens/project2.png" class="collage-img" />
+        <img src="assets/screens/project3.png" class="collage-img" />
+        <img src="assets/screens/project4.png" class="collage-img" />
+        <img src="assets/screens/project5.png" class="collage-img" />
+        <img src="assets/screens/project6.png" class="collage-img" />
+        <img src="assets/screens/project7.png" class="collage-img" />
+        <img src="assets/screens/project8.png" class="collage-img" />
+        <img src="assets/screens/project9.png" class="collage-img" />
+        <img src="assets/screens/project10.png" class="collage-img" />
+        <img src="assets/screens/project11.png" class="collage-img" />
+        <img src="assets/screens/project12.png" class="collage-img" />
+      </div>
+
+      <!-- Profile Content -->
+      <img src="./assets/profile.png" alt="Profile" class="w-40 h-40 rounded-full shadow-lg mb-4 relative z-20" />
+      <h1 class="text-4xl md:text-6xl font-bold mb-2 relative z-20">Hi, I’m Om Tapdiya</h1>
+      <p class="text-xl md:text-2xl text-gray-300 relative z-20">Student & AI/ML Aspirant</p>
+      <a href="#projects"
+        class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full transition relative z-20">
+        See My Work ↓
+      </a>
+    </section>
+  </header>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 px-6 bg-gray-800">
+    <h2 class="text-3xl font-semibold mb-8 text-center">🧠 Skills & Tech Stack</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>HTML/CSS</div>
+      <div>JavaScript</div>
+      <div>DBMS</div>
+      <div>Python</div>
+      <div>Java</div>
+      <div>Tailwind CSS</div>
+      <div>Git & GitHub</div>
+      <div>IoT</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 px-6">
+    <h2 class="text-3xl font-semibold mb-8 text-center">🛠️ Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Smart Home Automation -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+        <div class="relative h-48 mb-4 overflow-hidden rounded">
+          <template x-for="i in 2" :key="i">
+            <img :src="`./assets/homeautomation-${i}.png`" x-show="slide === i"
+              class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+              :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+          </template>
+          <button @click="slide = slide === 1 ? 2 : slide - 1"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+            ‹
+          </button>
+          <button @click="slide = slide === 2 ? 1 : slide + 1"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+            ›
+          </button>
         </div>
-  
-        <!-- Profile Content -->
-        <img src="./assets/profile.png" alt="Profile" class="w-40 h-40 rounded-full shadow-lg mb-4 relative z-20" />
-        <h1 class="text-4xl md:text-6xl font-bold mb-2 relative z-20">Hi, I’m Om Tapdiya</h1>
-        <p class="text-xl md:text-2xl text-gray-300 relative z-20">Student & AI/ML Aspirant</p>
-        <a href="#projects" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full transition relative z-20">
-          See My Work ↓
-        </a>
-      </section>
-    </header>
-  
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 px-6 bg-gray-800">
-      <h2 class="text-3xl font-semibold mb-8 text-center">🧠 Skills & Tech Stack</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div>HTML/CSS</div>
-        <div>JavaScript</div>
-        <div>DBMS</div>
-        <div>Python</div>
-        <div>Java</div>
-        <div>Tailwind CSS</div>
-        <div>Git & GitHub</div>
-        <div>IoT</div>
+        <h3 class="text-xl font-bold">Smart Home Automation</h3>
+        <p class="text-gray-400">
+          IoT project using ESP32: biometric gate access, automatic lighting, gas & fire detection, auto irrigation, and
+          more.
+        </p>
       </div>
-    </section>
-  
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-6">
-      <h2 class="text-3xl font-semibold mb-8 text-center">🛠️ Projects</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
-          <img src="./assets/project1.png" alt="Project 1" class="rounded mb-4">
-          <h3 class="text-xl font-bold">Smart Home Automation</h3>
-          <p class="text-gray-400">IoT project using ESP32, automating gate, lights, gas detection, and more.</p>
+
+      <!-- Snake Game -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+        <div class="relative h-48 mb-4 overflow-hidden rounded">
+          <template x-for="i in 4" :key="i">
+            <img :src="`./assets/snakegame-${i}.png`" x-show="slide === i"
+              class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+              :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+          </template>
+          <button @click="slide = slide === 1 ? 4 : slide - 1"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+            ‹
+          </button>
+          <button @click="slide = slide === 4 ? 1 : slide + 1"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+            ›
+          </button>
         </div>
-        <!-- Add more projects if needed -->
+        <h3 class="text-xl font-bold">Snake Game</h3>
+        <p class="text-gray-400">Classic snake game made using Python and Pygame, fun and addictive gameplay.</p>
       </div>
-    </section>
-  
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6 bg-gray-800">
-      <h2 class="text-3xl font-semibold mb-8 text-center">📫 Contact Me</h2>
-      <div class="text-center space-y-3">
-        <p>Email: omtapdiya75@gmail.com</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/om-tapdiya-438549272" class="text-indigo-400 hover:underline" target="_blank">/om-tapdiya</a></p>
-        <p>GitHub: <a href="https://github.com/Om-mac" class="text-indigo-400 hover:underline" target="_blank">@Om-mac</a></p>
+
+      <!-- Calculator -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+        <div class="relative h-48 mb-4 overflow-hidden rounded">
+          <template x-for="i in 4" :key="i">
+            <img :src="`./assets/calculator-${i}.png`" x-show="slide === i"
+              class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+              :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+          </template>
+          <button @click="slide = slide === 1 ? 4 : slide - 1"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+            ‹
+          </button>
+          <button @click="slide = slide === 4 ? 1 : slide + 1"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+            ›
+          </button>
+        </div>
+        <h3 class="text-xl font-bold">Calculator</h3>
+        <p class="text-gray-400">A simple and clean calculator built using HTML, CSS, and JavaScript.</p>
       </div>
-    </section>
-  
-    <!-- Footer -->
-    <footer class="py-6 text-center text-gray-500 text-sm bg-gray-900 border-t border-gray-700">
-      <p>© 2025 Om Tapdiya. All rights reserved.</p>
-    </footer>
-  
-    <!-- JS + Image Placement -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const images = document.querySelectorAll(".collage-img");
-        images.forEach(img => {
-          const rotation = Math.floor(Math.random() * 60 - 30); // -30 to +30
-          const top = Math.floor(Math.random() * 80);
-          const left = Math.floor(Math.random() * 80);
-          img.style.position = 'absolute';
-          img.style.width = '150px';
-          img.style.opacity = '0.12';
-          img.style.top = `${top}%`;
-          img.style.left = `${left}%`;
-          img.style.transform = `rotate(${rotation}deg)`;
-          img.style.transition = 'all 0.3s ease';
-          img.style.pointerEvents = 'none';
-        });
+
+      <!-- Real Estate App -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg" x-data="{ slide: 1 }">
+        <div class="relative h-48 mb-4 overflow-hidden rounded">
+          <template x-for="i in 5" :key="i">
+            <img :src="`./assets/realestate-${i}.png`" x-show="slide === i"
+              class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300"
+              :class="{ 'opacity-100': slide === i, 'opacity-0': slide !== i }">
+          </template>
+          <button @click="slide = slide === 1 ? 5 : slide - 1"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+            ‹
+          </button>
+          <button @click="slide = slide === 5 ? 1 : slide + 1"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 p-1 rounded-full hover:bg-gray-600">
+            ›
+          </button>
+        </div>
+        <h3 class="text-xl font-bold">Real Estate App</h3>
+        <p class="text-gray-400">Flask web app with house listings, search features, and contact form — powered by CSV
+          data.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 bg-gray-800">
+    <h2 class="text-3xl font-semibold mb-8 text-center">📫 Contact Me</h2>
+    <div class="text-center space-y-3">
+      <p>Email: omtapdiya75@gmail.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/om-tapdiya-438549272" class="text-indigo-400 hover:underline"
+          target="_blank">/om-tapdiya</a></p>
+      <p>GitHub: <a href="https://github.com/Om-mac" class="text-indigo-400 hover:underline" target="_blank">@Om-mac</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm bg-gray-900 border-t border-gray-700">
+    <p>© 2025 Om Tapdiya. All rights reserved.</p>
+  </footer>
+
+  <!-- JS + Image Placement -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const images = document.querySelectorAll(".collage-img");
+      images.forEach(img => {
+        const rotation = Math.floor(Math.random() * 60 - 30); // -30 to +30
+        const top = Math.floor(Math.random() * 80);
+        const left = Math.floor(Math.random() * 80);
+        img.style.position = 'absolute';
+        img.style.width = '150px';
+        img.style.opacity = '0.12';
+        img.style.top = `${top}%`;
+        img.style.left = `${left}%`;
+        img.style.transform = `rotate(${rotation}deg)`;
+        img.style.transition = 'all 0.3s ease';
+        img.style.pointerEvents = 'none';
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
